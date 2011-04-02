@@ -1,0 +1,63 @@
+#content
+  #about
+    %h1 Objective
+    %p
+      In a single sentence, 
+      %strong I want to write Ruby for a living.
+      I'm an extremely passionate software developer who's acquired an 
+      almost unhealthy love for Ruby and it's community. I've contributed
+      to projects like Sinatra and GemTesters as well as developing
+      plenty of my own open source tools and libraries. I'm crazy about
+      great user experiences, well tested code and beautiful design.
+    
+    %h1 Technical Experience
+    %ul
+      %li
+        %strong Languages:
+        Ruby, Python, PHP, Javascript, HTML, CSS, SQL
+      %li
+        %strong Frameworks:
+        Rails, Sinatra, CakePHP, Pylons, Cappuccino
+      %li
+        %strong Databases:
+        PostgreSQL, MySQL, Memcache, Redis
+      %li
+        %strong Testing:
+        RSpec, Cucumber, Shoulda
+      %li
+        %strong Operating Systems:
+        OSX, Debian Linux
+      %li
+        %strong Version Control:
+        Git, Subversion
+    
+    
+    %h1 Education
+    %p#school
+      = @matte.education.school
+    %p#degree
+      = @matte.education.degree + ", " + @matte.education.title
+      %span#graduated
+        &mdash; Graduated
+        = @matte.education.date_completed.strftime("%B %Y")
+    
+    %h1 Employment
+    - @matte.employments.each do |employment|
+      %h2
+        = employment.company_name
+        &mdash;
+        = employment.title
+      %p.date
+        = employment.date_started.strftime("%b %Y")
+        to
+        = employment.date_ended.strftime("%b %Y") rescue "Present"
+      
+      - if employment.company_name =~ /AWeber/
+        %p.aweber= "(I'm currently employed here, please do not contact. Thank you.)"
+      
+      %p.description= employment.description
+    
+    %h1 Best Pals
+    %img#pals{:src => "/images/ralph-and-me.jpg", :alt => "best pals 4 life"}
+    %p.note I know this is incredibly believable, but I assure you Ralph is back home, safe and sound.
+      
