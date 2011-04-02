@@ -11,7 +11,7 @@ Ruby Savvy Users
 
 Non-Ruby Savvy Users
 --------------------
-[Visit it online](http://google.com)
+[Visit it online](http://mnoble-resume.heroku.com/)
 
 Get In Touch
 ------------
