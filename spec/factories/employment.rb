@@ -1,7 +1,7 @@
 Factory.define(:aweber, :class => :Employment) do |f|
   f.title         "Web Developer"
   f.company_name  "AWeber Communications, Inc."
-  f.date_started  Time.new(2009, 3)
+  f.date_started  Time.mktime(2009, 3)
   f.date_ended    nil
   f.description   <<-DESC
     Developed a mix of CakePHP, Python and pure JavaScript
@@ -16,8 +16,8 @@ end
 Factory.define(:jscspeed, :class => :Employment) do |f|
   f.title         "Web Development Intern"
   f.company_name  "JSCSpeed"
-  f.date_started  Time.new(2008, 5)
-  f.date_ended    Time.new(2008, 8)
+  f.date_started  Time.mktime(2008, 5)
+  f.date_ended    Time.mktime(2008, 8)
   f.description   <<-DESC
     Managed, maintained and improved automative aftermarket parts
     vendor's ecommerce storefront website. Improved page load times
@@ -33,7 +33,7 @@ end
 Factory.define(:freelance, :class => :Employment) do |f|
   f.title         "Freelance Consultant"
   f.company_name  "Matte Noble Consulting"
-  f.date_started  Time.new(2006, 6)
+  f.date_started  Time.mktime(2006, 6)
   f.date_ended    nil
   f.description   <<-DESC
     Designed and developed a multitude of sites and applications for

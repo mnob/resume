@@ -22,7 +22,7 @@ describe Matte do
     it { should have_attended("Pennsylvania College of Technology") }
     it { should have_earned("Bachelors of Science") }
     it { should have_studied("Web & Application Development") }
-    it { should have_graduated(Time.new(2008, 12)) }
+    it { should have_graduated(Time.mktime(2008, 12)) }
   end
   
   describe "employment" do

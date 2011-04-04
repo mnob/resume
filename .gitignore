@@ -2,5 +2,3 @@
 db/*.sqlite3
 log/*.log
 tmp/
-resume_dev
-resume_test
